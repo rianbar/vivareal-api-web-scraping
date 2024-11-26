@@ -1,0 +1,14 @@
+spring:
+  codec:
+    max-in-memory-size: 500MB
+  application:
+    name: scraping_service
+scraping:
+  api:
+    zenrows_url: "${ZENROWS_URL:https://api.zenrows.com/v1/}"
+    vivareal_url: "${VIVA_REAL_URL_API:https://glue-api.vivareal.com/v3/listings}"
+    size: "${VIVA_REAL_LISTING_SIZE:110}"
+    web-client:
+      max-in-memory-size: "${WEB_CLIENT_MAX_IN_MEMORY_SIZE:512}"
+server:
+  port: 8081
