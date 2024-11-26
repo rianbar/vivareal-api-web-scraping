@@ -3,7 +3,7 @@ package com.rian.scraping.service;
 import java.util.regex.Pattern;
 
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 
 import com.rian.scraping.dto.ImportStartRequest;
@@ -20,7 +20,7 @@ import reactor.core.publisher.Mono;
 
 
 @Slf4j
-@Component
+@Service
 @RequiredArgsConstructor
 public class ApiRequestService {
   private static final Pattern ADVERTISER_ID_PATTERN = compile("\"advertiserId\":\"([a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})\"");
