@@ -16,7 +16,7 @@ import reactor.core.publisher.Mono;
 @RequiredArgsConstructor
 @RequestMapping("scraping")
 public class ScrapingController {
-    private final ApiRequestService service;
+  private final ApiRequestService service;
 
   @PostMapping("import-ads")
   public Mono<String> importAds(@RequestBody @Valid ImportStartRequest requestKey) {
